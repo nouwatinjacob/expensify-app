@@ -8,7 +8,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/playground/redux-expensify.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public')
@@ -33,5 +33,8 @@ module.exports = {
     ]
   },
   devtool: 'cheap-module-eval-source-map',
+  devServer: {
+    historyApiFallback: true,
+  },
   plugins: [htmlPlugin]
 };
