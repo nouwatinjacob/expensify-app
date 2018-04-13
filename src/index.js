@@ -26,4 +26,4 @@ const jsx = (
   </Provider>
 );
 
-ReactDOM.render(jsx, document.getElementById("index"));
+ReactDOM.render(jsx, document.getElementById("app"));

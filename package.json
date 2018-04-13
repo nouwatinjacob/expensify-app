@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --watch",
+    "start-dev": "webpack-dev-server --config ./webpack.config.js --mode development",
     "build": "webpack --mode production"
   },
   "author": "Nouwatin Jacob",
@@ -22,6 +23,7 @@
   "dependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.11",
     "moment": "^2.22.0",
     "node-sass": "^4.8.3",
@@ -30,6 +32,7 @@
     "react-addons-shallow-compare": "15.6.0",
     "react-dates": "12.3.0",
     "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.1",
     "react-modal": "^3.3.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",

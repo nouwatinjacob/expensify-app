@@ -1,18 +1,19 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
 const path = require('path');
 
 
-const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html"
-});
+// const htmlPlugin = new HtmlWebPackPlugin({
+//   template: "./src/index.html",
+//   filename: "./index.html"
+// });
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public')
-  },
+    path: __dirname + '/dist',
+    publicPath: '/',
+    filename: 'bundle.js'
+  },  
   module: {
     rules: [
       {
@@ -32,9 +33,12 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devtool: 'cheap-module-eval-source-map',
   devServer: {
+    contentBase: './dist',
     historyApiFallback: true,
-  },
-  plugins: [htmlPlugin]
+  },  
 };
