@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --watch",
     "start-dev": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "jest"
   },
   "author": "Nouwatin Jacob",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.11",
+    "jest": "^22.4.3",
     "moment": "^2.22.0",
     "node-sass": "^4.8.3",
     "normalize.css": "^8.0.0",
